@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-FROM ibm-zcon-server:3.0.66
+FROM cp.icr.io/cp/zosconnect/ibm-zcon-server:3.0.66 AS ibm-zcon-server
 
 # customise server.xml via dropins
 COPY --chown=1001:0 src/main/liberty/config /config/configDropins/overrides
